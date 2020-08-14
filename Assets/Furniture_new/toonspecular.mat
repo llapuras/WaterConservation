@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: toonspecular
   m_Shader: {fileID: 4800000, guid: 572cceafad54866448ff01fb50790f61, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: FADE RIM
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -40,7 +40,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3ff3041d26e84b247b1a900206562e65, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7baf8cc50f7c4cd4a95ab01012f234cd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -72,7 +72,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FADE: 0
+    - _FADE: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -81,13 +81,13 @@ Material:
     - _OcclusionStrength: 1
     - _Offset: 1.57
     - _Parallax: 0.02
-    - _RIM: 0
+    - _RIM: 1
     - _SmoothnessTextureChannel: 0
     - _SpecOffset: 0.5
     - _SpecSize: 1.63
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _TopBottomOffset: 3.94
+    - _TopBottomOffset: -4
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

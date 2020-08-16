@@ -23,10 +23,7 @@ public class DialogueManager : MonoBehaviour
 	{
 		animator.SetBool("IsOpen", true);
 
-		//if (dialogue.name != null)
-		//{
-		//	nameText.text = dialogue.name;
-		//}
+		nameText.text = dialogue.name;
 
 		sentences.Clear();
 

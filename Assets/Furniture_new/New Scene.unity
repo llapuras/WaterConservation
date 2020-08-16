@@ -188,7 +188,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: The Fountain is running ...
 --- !u!222 &45350245
 CanvasRenderer:
@@ -4636,7 +4636,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - ...
+    - The Fountain is Running ...
     - "\u72ED\u9698\u7684\u6D6E\u751F\u603B\u4F7F\u6211\u611F\u5230\u975E\u5E38\u70E6\u607C\u3002"
     - "\u8981\u53EA\u987E\u5B09\u6E38\uFF0C\u6211\u5DF2\u592A\u8001\uFF0C\r\n"
     - "\r\u8981\u65E0\u6240\u8981\u6C42\uFF0C\u6211\u53C8\u592A\u5E74\u8F7B\u3002"

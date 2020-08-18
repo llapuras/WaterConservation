@@ -5,11 +5,14 @@ using UnityEngine.AI;
 [RequireComponent(typeof(Animator))]
 public class LocomotionSimpleAgent : MonoBehaviour
 {
-    Animator anim;
-    NavMeshAgent agent;
-     float velocity = 0;
-    RaycastHit hitInfo = new RaycastHit();
-    Vector3 lastPosition;
+    private Animator anim;
+    private NavMeshAgent agent;
+    private float velocity = 0;
+    private RaycastHit hitInfo = new RaycastHit();
+    private Vector3 lastPosition;
+
+    public Vector3 des;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -23,26 +26,23 @@ public class LocomotionSimpleAgent : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray.origin, ray.direction, out hitInfo))
                 agent.destination = hitInfo.point;
+            des = hitInfo.point;
         }
-        velocity = Mathf.Lerp(velocity, (transform.position - lastPosition).magnitude / Time.deltaTime, 0.3f);
 
-        //Debug.Log(velocity);
+        velocity = Mathf.Lerp(velocity, (transform.position - lastPosition).magnitude / Time.deltaTime, 0.3f);
         lastPosition = transform.position;
 
-        anim.SetFloat("WalkingSpeed", velocity);
 
-        //if (velocity != 0)
-        //{
-        //    anim.SetBool("isWalking", true);
-        //}
-        //else {
-        //    anim.SetBool("isWalking", false);
-        //}
+        anim.SetFloat("velocity", velocity);
+
+        if (Vector3.Magnitude(transform.position - agent.destination) > 0.01f)
+        {
+            anim.SetBool("iswalking", true);
+        }
+        else
+        {
+            anim.SetBool("iswalking", false);
+        }
     }
 
-    void OnAnimatorMove()
-    {
-        // Update position based on animation movement using navigation surface height
-        transform.position = agent.nextPosition;
-    }
 }

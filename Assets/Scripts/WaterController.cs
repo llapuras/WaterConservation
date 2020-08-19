@@ -6,20 +6,21 @@ using UnityEngine.UI;
 public class WaterController : MonoBehaviour
 {
     [Header("UI")]
-    public Text totalWaterText; //水量显示
-    public Text totalMotionText; //心情显示
+    public Text totalWaterText; //water text
+    public Text totalMotionText; //motion text
 
     [Header("Parameters")]
-    public float initialWater = 1000; //初始水量
-    public int initialMotion = 50; //初始心情
-    public int useSpeed = 1; //初始用水速度
+    public float initialWater = 1000; //initial water
+    public float initialMotion = 50; //initial motion
+    public float useSpeed = 1; //water use speed
+    public float motionSpeed = 0; //motion change speed，miotion drop slowly if you do nothing 
 
     //[Header("Comsume Water")]
     //public GameObject[] eventsList;
 
     //...
-    public float totalWater; //水总量
-    public float totalMotion; //心情总量
+    public float totalWater; //total water
+    public float totalMotion; //total motion
     public GameObject clock;
 
     void Start()
@@ -33,9 +34,12 @@ public class WaterController : MonoBehaviour
         if (!clock.GetComponent<Clock>().isPause)
         {
             //Water Use
-            initialWater -= useSpeed * 0.1f;
-            totalWater = initialWater;
-            totalWater = (int)totalWater;
+            initialWater -= useSpeed * 0.01f;
+            totalWater = (int)initialWater;
+
+            //Motion Drop
+            initialMotion -= motionSpeed * 0.001f;
+            totalMotion = (int)initialMotion;
         }
 
         //UI 

@@ -11,14 +11,13 @@ public class DialogueManager : MonoBehaviour
 
 	public Animator animator;
 
-	public Queue<string> sentences;
+	public Queue<string> sentences = new Queue<string>();
 
 	public GameObject mission;
 
 	// Use this for initialization
 	void Start()
 	{
-		sentences = new Queue<string>();
 
 	}
 

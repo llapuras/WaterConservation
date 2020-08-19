@@ -20,6 +20,8 @@ public class DetectDistance : MonoBehaviour
     public GameObject TaskUI;
     public GameObject DialogueUI;
 
+    public bool inTask = false;
+
     void Start()
     {
         goal = gameObject;
@@ -32,7 +34,7 @@ public class DetectDistance : MonoBehaviour
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
         //Debug.Log(dist);
-        if (dist < detectDistance)
+        if (dist < detectDistance && !inTask)
         {
             bubble.SetActive(true);
             QuestPopUp();
@@ -51,6 +53,7 @@ public class DetectDistance : MonoBehaviour
         mainCamera.SetActive(true);
         player.SetActive(true);
         TaskUI.SetActive(false);
+        inTask = false;
 
     }
 
@@ -58,7 +61,8 @@ public class DetectDistance : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            QuitTask(); 
+            QuitTask();
+            inTask = false;
         }
         else if (Input.GetKey(KeyCode.F))
         {
@@ -67,6 +71,7 @@ public class DetectDistance : MonoBehaviour
             bubble.SetActive(false);
             player.SetActive(false);
             TaskUI.SetActive(true);
+            inTask = true;
 
             if (DialogueUI != null)
             {

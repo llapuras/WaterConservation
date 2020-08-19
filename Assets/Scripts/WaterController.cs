@@ -5,36 +5,40 @@ using UnityEngine.UI;
 
 public class WaterController : MonoBehaviour
 {
+    [Header("UI")]
     public Text totalWaterText; //水量显示
-    public Text netGainText; //水量显示
-    
-    private int totalWater;     //水库总量
-    public int speedCost;       //每日消耗水量
-    public int speedGain;       //每日获得水量
-    public int netGain;          //每日净获得水量
-    // Start is called before the first frame update
+    public Text totalMotionText; //心情显示
+
+    [Header("Parameters")]
+    public int initialWater = 1000; //初始水量
+    public int initialMotion = 50; //初始心情
+    public float useSpeed = 1; //初始用水速度
+
+    //[Header("Comsume Water")]
+    //public GameObject[] eventsList;
+
+    //...
+    public float totalWater; //水总量
+    public float totalMotion; //心情总量
+    public GameObject clock;
+
     void Start()
     {
-        totalWater = 200;
-
-        speedGain = 2;
-        speedCost = 1;
-
+        totalWater = initialWater;
+        totalMotion = initialMotion;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Water caculator
-        netGain = speedGain - speedCost;
+        if (!clock.GetComponent<Clock>().isPause)
+        {
+            //Water Use
+            totalWater -= (float)clock.GetComponent<Clock>().ReturnTotalTime() * useSpeed;
+            totalWater = (int)totalWater;
+        }
 
-        totalWater += speedGain;//获得
-        totalWater -= speedCost;//消耗
-        
         //UI 
         totalWaterText.text = totalWater.ToString();
-        netGainText.text = netGain + "/s";
-
-
+        totalMotionText.text = totalMotion.ToString();
     }
 }

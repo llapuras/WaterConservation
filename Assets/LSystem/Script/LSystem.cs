@@ -9,9 +9,12 @@ public class LSystem : MonoBehaviour
     public Dictionary<char, string> rules = new Dictionary<char, string>();
 
     [Header("Plant Units")]
-    public GameObject stem;
-    public GameObject petal;
-    public GameObject leaf;
+    public GameObject S;
+    public GameObject P;
+    public GameObject L;
+    public GameObject D;
+    public GameObject F;
+    public GameObject H;
 
     [Header("Input Setting")]
     [Range(0, 6)]
@@ -112,7 +115,7 @@ public class LSystem : MonoBehaviour
     void determinePoints(string p_input)
     {
         Stack<point> returnValues = new Stack<point>();
-        point lastPoint = new point(new Vector3(transform.position.x, transform.position.y + stepHeight, transform.position.z), transform.eulerAngles, inputHeight, stem);//初始位置和父物体关联
+        point lastPoint = new point(new Vector3(transform.position.x, transform.position.y + stepHeight, transform.position.z), transform.eulerAngles, inputHeight, S);//初始位置和父物体关联
         returnValues.Push(lastPoint);
 
         foreach (char c in p_input)
@@ -122,7 +125,7 @@ public class LSystem : MonoBehaviour
                 case 'S': //Stem
                     points.Add(lastPoint);
 
-                    point newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, stem);
+                    point newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, S);
                     newPoint.BranchLength = lastPoint.BranchLength * scalingFactor;
                     if (newPoint.BranchLength <= 0.0f) newPoint.BranchLength = 0.001f;
 
@@ -147,7 +150,7 @@ public class LSystem : MonoBehaviour
                 case 'P': //Petal
                     points.Add(lastPoint);
 
-                    newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, petal);
+                    newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, P);
                     newPoint.BranchLength = lastPoint.BranchLength * scalingFactor;
                     if (newPoint.BranchLength <= 0.0f) newPoint.BranchLength = 0.001f;
 
@@ -171,7 +174,79 @@ public class LSystem : MonoBehaviour
                 case 'L': //Leaf
                     points.Add(lastPoint);
 
-                    newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, leaf);
+                    newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, L);
+                    newPoint.BranchLength = lastPoint.BranchLength * scalingFactor;
+                    if (newPoint.BranchLength <= 0.0f) newPoint.BranchLength = 0.001f;
+
+                    newPoint.Angle.y = lastPoint.Angle.y;
+
+                    //add random
+                    if (isRandom == true)
+                    {
+                        newPoint.Angle.y += UnityEngine.Random.Range(randomRange.x, randomRange.y);
+                    }
+
+                    newPoint.Pos = pivot(newPoint.Pos, lastPoint.Pos, new Vector3(newPoint.Angle.x, 0, 0));
+                    newPoint.Pos = pivot(newPoint.Pos, lastPoint.Pos, new Vector3(0, newPoint.Angle.y, 0));
+                    //newPoint.Point = pivot(newPoint.Point, lastPoint.Point, Vector3.zero);
+                    //newPoint.Point = pivot(newPoint.Point, lastPoint.Point, Vector3.zero);
+
+                    points.Add(newPoint);
+                    lastPoint = newPoint;
+                    break;
+
+                case 'D': //Leaf
+                    points.Add(lastPoint);
+
+                    newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, D);
+                    newPoint.BranchLength = lastPoint.BranchLength * scalingFactor;
+                    if (newPoint.BranchLength <= 0.0f) newPoint.BranchLength = 0.001f;
+
+                    newPoint.Angle.y = lastPoint.Angle.y;
+
+                    //add random
+                    if (isRandom == true)
+                    {
+                        newPoint.Angle.y += UnityEngine.Random.Range(randomRange.x, randomRange.y);
+                    }
+
+                    newPoint.Pos = pivot(newPoint.Pos, lastPoint.Pos, new Vector3(newPoint.Angle.x, 0, 0));
+                    newPoint.Pos = pivot(newPoint.Pos, lastPoint.Pos, new Vector3(0, newPoint.Angle.y, 0));
+                    //newPoint.Point = pivot(newPoint.Point, lastPoint.Point, Vector3.zero);
+                    //newPoint.Point = pivot(newPoint.Point, lastPoint.Point, Vector3.zero);
+
+                    points.Add(newPoint);
+                    lastPoint = newPoint;
+                    break;
+
+                case 'H': //Leaf
+                    points.Add(lastPoint);
+
+                    newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, H);
+                    newPoint.BranchLength = lastPoint.BranchLength * scalingFactor;
+                    if (newPoint.BranchLength <= 0.0f) newPoint.BranchLength = 0.001f;
+
+                    newPoint.Angle.y = lastPoint.Angle.y;
+
+                    //add random
+                    if (isRandom == true)
+                    {
+                        newPoint.Angle.y += UnityEngine.Random.Range(randomRange.x, randomRange.y);
+                    }
+
+                    newPoint.Pos = pivot(newPoint.Pos, lastPoint.Pos, new Vector3(newPoint.Angle.x, 0, 0));
+                    newPoint.Pos = pivot(newPoint.Pos, lastPoint.Pos, new Vector3(0, newPoint.Angle.y, 0));
+                    //newPoint.Point = pivot(newPoint.Point, lastPoint.Point, Vector3.zero);
+                    //newPoint.Point = pivot(newPoint.Point, lastPoint.Point, Vector3.zero);
+
+                    points.Add(newPoint);
+                    lastPoint = newPoint;
+                    break;
+
+                case 'F': //Leaf
+                    points.Add(lastPoint);
+
+                    newPoint = new point(lastPoint.Pos + new Vector3(0, lastPoint.BranchLength, 0), lastPoint.Angle, inputHeight, F);
                     newPoint.BranchLength = lastPoint.BranchLength * scalingFactor;
                     if (newPoint.BranchLength <= 0.0f) newPoint.BranchLength = 0.001f;
 
@@ -260,13 +335,13 @@ public class LSystem : MonoBehaviour
 
     void Update()
     {
-        if (debug)
-        {
-            for (int i = 0; i < points.Count; i += 2)
-            {
-                Debug.DrawLine(points[i].Pos, points[i + 1].Pos, Color.red);
-            }
-        }
+        //if (debug)
+        //{
+        //    for (int i = 0; i < points.Count; i += 2)
+        //    {
+        //        Debug.DrawLine(points[i].Pos, points[i + 1].Pos, Color.red);
+        //    }
+        //}
     }
 
     public void RotationCorrection()

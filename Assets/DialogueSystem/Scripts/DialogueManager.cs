@@ -13,6 +13,8 @@ public class DialogueManager : MonoBehaviour
 
 	private Queue<string> sentences;
 
+	public GameObject mission;
+
 	// Use this for initialization
 	void Start()
 	{
@@ -23,7 +25,7 @@ public class DialogueManager : MonoBehaviour
 	{
 		animator.SetBool("IsOpen", true);
 
-		nameText.text = dialogue.name;
+		//nameText.text = dialogue.name;
 
 		sentences.Clear();
 
@@ -40,6 +42,9 @@ public class DialogueManager : MonoBehaviour
 		if (sentences.Count == 0)
 		{
 			EndDialogue();
+			//进入下一阶段→选择题或者游戏
+			mission.SetActive(true);
+
 			return;
 		}
 

@@ -18,6 +18,7 @@ public class DetectDistance : MonoBehaviour
     public float detectDistance = 1;
 
     public GameObject TaskUI;
+    public GameObject DialogueUI;
 
     void Start()
     {
@@ -30,7 +31,7 @@ public class DetectDistance : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
-        Debug.Log(dist);
+        //Debug.Log(dist);
         if (dist < detectDistance)
         {
             bubble.SetActive(true);
@@ -59,6 +60,12 @@ public class DetectDistance : MonoBehaviour
             gameObject.SetActive(false);
             player.SetActive(false);
             TaskUI.SetActive(true);
+
+            if (DialogueUI != null)
+            {
+                DialogueUI.SetActive(true);//如果有对话就播对话
+                DialogueUI.GetComponent<DialogueTrigger>().TriggerDialogue();
+            }
         }
     }
 

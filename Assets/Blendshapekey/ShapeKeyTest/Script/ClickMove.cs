@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ClickMove : MonoBehaviour
 {
-
+    public Camera cam;
     public Vector3 mOffset;
     public float mZCoord;
 
@@ -16,7 +16,7 @@ public class ClickMove : MonoBehaviour
 
     private void OnMouseDown()
     {
-        mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
+        mZCoord = cam.WorldToScreenPoint(gameObject.transform.position).z;
         mOffset = gameObject.transform.position - GetMouseWorldPos();
     }
 
@@ -26,7 +26,7 @@ public class ClickMove : MonoBehaviour
 
         mousePoint.z = mZCoord;
 
-        return Camera.main.ScreenToWorldPoint(mousePoint);
+        return cam.ScreenToWorldPoint(mousePoint);
     }
 
     private void OnMouseDrag()

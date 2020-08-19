@@ -10,9 +10,9 @@ public class WaterController : MonoBehaviour
     public Text totalMotionText; //心情显示
 
     [Header("Parameters")]
-    public int initialWater = 1000; //初始水量
+    public float initialWater = 1000; //初始水量
     public int initialMotion = 50; //初始心情
-    public float useSpeed = 1; //初始用水速度
+    public int useSpeed = 1; //初始用水速度
 
     //[Header("Comsume Water")]
     //public GameObject[] eventsList;
@@ -33,7 +33,8 @@ public class WaterController : MonoBehaviour
         if (!clock.GetComponent<Clock>().isPause)
         {
             //Water Use
-            totalWater -= (float)clock.GetComponent<Clock>().ReturnTotalTime() * useSpeed;
+            initialWater -= useSpeed * 0.1f;
+            totalWater = initialWater;
             totalWater = (int)totalWater;
         }
 

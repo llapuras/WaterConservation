@@ -23,7 +23,7 @@ public class DetectDistance : MonoBehaviour
     void Start()
     {
         goal = gameObject;
-        bubble = transform.Find("round").gameObject;
+        //bubble = transform.Find("round").gameObject;
         //switchCamera = gameObject.transform.Find("Camera1").gameObject;
     }
 
@@ -57,7 +57,7 @@ public class DetectDistance : MonoBehaviour
         {
             switchCamera.SetActive(true);
             mainCamera.SetActive(false);
-            gameObject.SetActive(false);
+            bubble.SetActive(false);
             player.SetActive(false);
             TaskUI.SetActive(true);
 

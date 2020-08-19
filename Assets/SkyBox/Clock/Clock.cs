@@ -27,6 +27,8 @@ public class Clock : MonoBehaviour {
 
 	private TimeSpan stopTime;
 
+	private double oldTotal; 
+
 	[Header("UI Button")]
 	public GameObject pauseBtn;
 	public GameObject playBtn;
@@ -65,6 +67,7 @@ public class Clock : MonoBehaviour {
 		gapSecond = currentTime.TotalSeconds - stopTime.TotalSeconds;
 
 	}
+
 
 	public void SetPause()
     {
@@ -126,5 +129,22 @@ public class Clock : MonoBehaviour {
 		//UI
 		date = (int)((time.TotalHours - initialHour) * degreesPerHour / 720) + 1;
 		dateUI.text = "Day " + date;
+	}
+
+	public double ReturnDeltaTime()
+	{
+        if (oldTotal == null)
+        {
+			//第一次
+			oldTotal = initialHour;
+
+        }
+        
+		TimeSpan time = DateTime.Now.TimeOfDay;
+		double delta = (time.TotalHours - oldTotal);
+		oldTotal = time.TotalHours;
+
+		Debug.Log(delta);
+		return delta;
 	}
 }

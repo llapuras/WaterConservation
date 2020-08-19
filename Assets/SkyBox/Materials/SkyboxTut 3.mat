@@ -65,7 +65,7 @@ Material:
     - _FuzzinessUnder: 0.259
     - _HorizonIntensity: 5.08
     - _MoonOffset: -0.177
-    - _MoonRadius: 0.558
+    - _MoonRadius: 0.07
     - _Offset: 0.074
     - _OffsetClouds: -0.757
     - _OffsetHorizon: 0.016
@@ -78,7 +78,7 @@ Material:
     - _Speed: 4.8
     - _StarsCutoff: 0.038
     - _StarsSpeed: 0.54
-    - _SunRadius: 0.405
+    - _SunRadius: 0.07
     m_Colors:
     - _BottomColor: {r: 0.5424528, g: 0.7915619, b: 1, a: 1}
     - _BottomColor2: {r: 0, g: 0, b: 0, a: 1}

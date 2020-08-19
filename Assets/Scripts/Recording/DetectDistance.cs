@@ -17,6 +17,8 @@ public class DetectDistance : MonoBehaviour
 
     public float detectDistance = 1;
 
+    public GameObject TaskUI;
+
     void Start()
     {
         goal = gameObject;
@@ -28,6 +30,7 @@ public class DetectDistance : MonoBehaviour
     void Update()
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
+        Debug.Log(dist);
         if (dist < detectDistance)
         {
             bubble.SetActive(true);
@@ -46,12 +49,16 @@ public class DetectDistance : MonoBehaviour
         {
             switchCamera.SetActive(false);
             mainCamera.SetActive(true);
+            player.SetActive(true);
+            TaskUI.SetActive(false);
         }
         else if (Input.GetKey(KeyCode.F))
         {
             switchCamera.SetActive(true);
             mainCamera.SetActive(false);
-            bubble.SetActive(false);
+            gameObject.SetActive(false);
+            player.SetActive(false);
+            TaskUI.SetActive(true);
         }
     }
 

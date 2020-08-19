@@ -5,13 +5,21 @@ using UnityEngine;
 public class HideGo : MonoBehaviour
 {
 
-    public GameObject[] gos;
-    // Start is called before the first frame update
+    public GameObject[] hideList;
+    public GameObject[] showupList;
+
+    //hide and show up
     public void TurnOffFountain()
     {
-        foreach (GameObject x in gos)
+        foreach (GameObject x in hideList)
         {
             x.SetActive(false);
         }
+
+        foreach (GameObject x in showupList)
+        {
+            x.SetActive(true);
+        }
     }
+
 }

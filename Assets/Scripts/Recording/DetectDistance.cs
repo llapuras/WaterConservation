@@ -44,14 +44,21 @@ public class DetectDistance : MonoBehaviour
 
     }
 
+    //if task finished, hide task trigger
+    public void QuitTask()
+    {
+        switchCamera.SetActive(false);
+        mainCamera.SetActive(true);
+        player.SetActive(true);
+        TaskUI.SetActive(false);
+
+    }
+
     void QuestPopUp()
     {
         if (Input.GetKey(KeyCode.Escape))
         {
-            switchCamera.SetActive(false);
-            mainCamera.SetActive(true);
-            player.SetActive(true);
-            TaskUI.SetActive(false);
+            QuitTask(); 
         }
         else if (Input.GetKey(KeyCode.F))
         {

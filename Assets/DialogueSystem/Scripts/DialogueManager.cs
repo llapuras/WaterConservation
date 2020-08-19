@@ -6,12 +6,12 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
 
-	public Text nameText;
+	//public Text nameText;
 	public Text dialogueText;
 
 	public Animator animator;
 
-	private Queue<string> sentences;
+	public Queue<string> sentences;
 
 	public GameObject mission;
 
@@ -19,6 +19,7 @@ public class DialogueManager : MonoBehaviour
 	void Start()
 	{
 		sentences = new Queue<string>();
+
 	}
 
 	public void StartDialogue(Dialogue dialogue)
@@ -42,8 +43,12 @@ public class DialogueManager : MonoBehaviour
 		if (sentences.Count == 0)
 		{
 			EndDialogue();
-			//进入下一阶段→选择题或者游戏
-			mission.SetActive(true);
+
+			//if there is mission then enter this step
+			if (mission)
+			{
+				mission.SetActive(true);
+			}//else end dialogue
 
 			return;
 		}

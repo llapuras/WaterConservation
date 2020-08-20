@@ -10728,6 +10728,11 @@ PrefabInstance:
       propertyPath: m_NavMeshLayer
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6474855534145837672, guid: 71abdae4ef53ac64da501616d363f197,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -6437127842040023687, guid: 71abdae4ef53ac64da501616d363f197,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -11397,6 +11402,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2446331821087101749, guid: 71abdae4ef53ac64da501616d363f197,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2447282515918168430, guid: 71abdae4ef53ac64da501616d363f197,
         type: 3}
@@ -22941,7 +22951,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cooking
+  m_Text: Cook Meal
 --- !u!222 &1229991849
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -45,13 +45,13 @@ public class LaundryTaskManager : MonoBehaviour
     public void addPiles()
     {
         collected += 1;
-        display.text = collected + " / 5";
+        display.text = collected + " / " + totalPiles;
     }
 
 
     void Start()
     {
-        display.text = "0 / 5";
+        display.text = "0 / " + totalPiles;
 
     }
 

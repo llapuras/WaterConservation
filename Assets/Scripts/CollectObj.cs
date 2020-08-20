@@ -24,7 +24,7 @@ public class CollectObj : MonoBehaviour
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
 
-        Debug.Log(dist);
+        //Debug.Log(dist);
         if (dist < detectDistance)
         {
             bubble.SetActive(true);

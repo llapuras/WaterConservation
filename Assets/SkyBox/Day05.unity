@@ -18168,7 +18168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &313378479
 Camera:
   m_ObjectHideFlags: 0
@@ -18227,7 +18227,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 313378478}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b4ef277a6056d740abfbaea50c1eb10, type: 3}
   m_Name: 
@@ -23939,7 +23939,7 @@ PrefabInstance:
         type: 3}
       propertyPath: showupList.Array.data[0]
       value: 
-      objectReference: {fileID: 388053297}
+      objectReference: {fileID: 0}
     - target: {fileID: 8335688499477774850, guid: c75bfd94724778f4aa54af2ff6025f8e,
         type: 3}
       propertyPath: hideList.Array.size
@@ -23975,22 +23975,6 @@ PrefabInstance:
       propertyPath: waterControlGo
       value: 
       objectReference: {fileID: 1759111560}
-    - target: {fileID: 8335688500174037228, guid: c75bfd94724778f4aa54af2ff6025f8e,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8335688500174037228, guid: c75bfd94724778f4aa54af2ff6025f8e,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[0]
-      value: "I \u2764 shower/bathing ! (\uFF9F3\uFF9F)\uFF5E\u266A "
-      objectReference: {fileID: 0}
-    - target: {fileID: 8335688500174037228, guid: c75bfd94724778f4aa54af2ff6025f8e,
-        type: 3}
-      propertyPath: dialogue.sentences.Array.data[1]
-      value: "Think of baths as an occasional treat and spend less time in the shower
-        ! That\u2018s water conservation lifestle !"
-      objectReference: {fileID: 0}
     - target: {fileID: 8335688500191455970, guid: c75bfd94724778f4aa54af2ff6025f8e,
         type: 3}
       propertyPath: waterControlGo
@@ -24026,21 +24010,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 830811281}
-    - target: {fileID: 8335688500627383178, guid: c75bfd94724778f4aa54af2ff6025f8e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8335688500627383178, guid: c75bfd94724778f4aa54af2ff6025f8e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8335688500627383178, guid: c75bfd94724778f4aa54af2ff6025f8e,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c75bfd94724778f4aa54af2ff6025f8e, type: 3}
 --- !u!1 &1062142401 stripped
@@ -26550,7 +26519,7 @@ MonoBehaviour:
   hideList:
   - {fileID: 2039439062}
   showupList:
-  - {fileID: 1446456276}
+  - {fileID: 0}
 --- !u!114 &1274613014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31919,7 +31888,7 @@ MonoBehaviour:
   player: {fileID: 1507131717}
   goal: {fileID: 0}
   bubble: {fileID: 931506531}
-  detectDistance: 3
+  detectDistance: 2
   TaskUI: {fileID: 1106435487}
   DialogueUI: {fileID: 138708345}
   inTask: 0
@@ -33162,7 +33131,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - 'That''s great ! '
+    - The room looks tidy now!
 --- !u!1 &1493240319
 GameObject:
   m_ObjectHideFlags: 0
@@ -52088,7 +52057,6 @@ MonoBehaviour:
   hideList: []
   showupList:
   - {fileID: 1229026528}
-  - {fileID: 1754024007}
 --- !u!114 &2051049614
 MonoBehaviour:
   m_ObjectHideFlags: 0

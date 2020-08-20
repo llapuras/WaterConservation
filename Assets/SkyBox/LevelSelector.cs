@@ -22,7 +22,7 @@ public class LevelSelector : MonoBehaviour
 
     public void LoadLevel()
     {
-        SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
         SceneManager.LoadScene(sname);
     }
 }

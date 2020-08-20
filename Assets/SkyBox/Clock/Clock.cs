@@ -10,7 +10,7 @@ public class Clock : MonoBehaviour {
 
 	public float minPerDay = 5;
 
-	public int date = 1;
+	public int date = 1;//set initial date
 	public int time = 1;
 
 	[Header("GO")]
@@ -122,22 +122,23 @@ public class Clock : MonoBehaviour {
 	{
 		TimeSpan time = DateTime.Now.TimeOfDay;
 		hoursTransform.localRotation =//弥补暂停多出来的时间差
-			Quaternion.Euler(0f, (float)(time.TotalHours - initialHour) * degreesPerHour, 0f);
+			Quaternion.Euler(0f, (float)(time.TotalHours - initialHour) * degreesPerHour+180, 0f);
 		minutesTransform.localRotation =
 			Quaternion.Euler(0f, (float)(time.TotalMinutes - initialMinute) * degreesPerMinute, 0f);
 		secondsTransform.localRotation =
 			Quaternion.Euler(0f, (float)(time.TotalSeconds - initialSecond) * degreesPerSecond, 0f);
 
 		//skybox
-		skydegree.x = -100 + ((float)((time.TotalHours - initialHour) * degreesPerHour) / 2) % 360;
+		skydegree.x = ((float)((time.TotalHours - initialHour) * degreesPerHour) / 2) % 360;
 
 		//UI
 		date = (int)((time.TotalHours - initialHour) * degreesPerHour / 720) + 1;
 
-		if (dateUI)
-		{
-			dateUI.text = "Day " + date;
-		}
+		//level: don't need to change date
+		//if (dateUI)
+		//{
+		//	dateUI.text = "Day " + date;
+		//}
 	}
 
 	public double ReturnDeltaTime()

@@ -96,8 +96,8 @@ Material:
     - _Color3: {r: 0.3679245, g: 0.33495015, b: 0.33495015, a: 1}
     - _Color3night: {r: 0.020247413, g: 0.043142565, b: 0.066037714, a: 1}
     - _ColorNight: {r: 0.1485849, g: 0.30771622, b: 0.5, a: 1}
-    - _DayBottomColor: {r: 0, g: 0.7110803, b: 1, a: 1}
-    - _DayTopColor: {r: 0.5030705, g: 0.59345114, b: 0.8962264, a: 1}
+    - _DayBottomColor: {r: 0, g: 0.6856322, b: 1, a: 1}
+    - _DayTopColor: {r: 0.6367924, g: 0.6929373, b: 1, a: 1}
     - _HorizonColorDay: {r: 0, g: 0.4300858, b: 0.745283, a: 1}
     - _HorizonColorNight: {r: 0.12758097, g: 0.18826702, b: 0.4433962, a: 1}
     - _MoonColor: {r: 1, g: 1, b: 1, a: 1}

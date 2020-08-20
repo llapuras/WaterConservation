@@ -23,6 +23,8 @@ public class WaterController : MonoBehaviour
     public float totalMotion; //total motion
     public GameObject clock;
 
+    public GameObject gameoverPanel;
+
     void Start()
     {
         totalWater = initialWater;
@@ -34,12 +36,28 @@ public class WaterController : MonoBehaviour
         if (!clock.GetComponent<Clock>().isPause)
         {
             //Water Use
-            initialWater -= useSpeed * 0.01f;
-            totalWater = (int)initialWater;
+            if (totalWater > 0)
+            {
+                initialWater -= useSpeed * 0.01f;
+                totalWater = (int)initialWater;
+            }
+            else
+            {
+                gameoverPanel.SetActive(true);
+                return;
+            }
 
             //Motion Drop
-            initialMotion -= motionSpeed * 0.001f;
-            totalMotion = (int)initialMotion;
+            if (totalMotion > 0)
+            {
+                initialMotion -= motionSpeed * 0.001f;
+                totalMotion = (int)initialMotion;
+            }
+            else
+            {
+                gameoverPanel.SetActive(true);
+                return;
+            }
         }
 
         //UI 

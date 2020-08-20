@@ -34,8 +34,8 @@ public class ScoreChanger : MonoBehaviour
 
     public void ChangeScore()
     {
-        waterControlGo.GetComponent<WaterController>().totalMotion += motionChanged;
-        waterControlGo.GetComponent<WaterController>().totalWater += waterChanged;
+        waterControlGo.GetComponent<WaterController>().initialMotion += motionChanged;
+        waterControlGo.GetComponent<WaterController>().initialWater += waterChanged;
         waterControlGo.GetComponent<WaterController>().useSpeed += speedChanged;
         waterControlGo.GetComponent<WaterController>().motionSpeed += spdMotionChanged;
     }

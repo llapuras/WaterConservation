@@ -77,7 +77,7 @@ Material:
     - _Slider2: 0.098
     - _Speed: 2.3
     - _StarsCutoff: 0.038
-    - _StarsSpeed: 0.586
+    - _StarsSpeed: 0.35
     - _SunRadius: 0.175
     m_Colors:
     - _BottomColor: {r: 0.5424528, g: 0.7915619, b: 1, a: 1}
@@ -96,16 +96,16 @@ Material:
     - _Color3: {r: 0.3679245, g: 0.33495015, b: 0.33495015, a: 1}
     - _Color3night: {r: 0.020247413, g: 0.043142565, b: 0.066037714, a: 1}
     - _ColorNight: {r: 0.1485849, g: 0.30771622, b: 0.5, a: 1}
-    - _DayBottomColor: {r: 0.22957456, g: 0.7264151, b: 0.579865, a: 1}
-    - _DayTopColor: {r: 0.504717, g: 0.62504005, b: 1, a: 1}
-    - _HorizonColorDay: {r: 0.8679245, g: 0.49592853, b: 0.16785331, a: 1}
+    - _DayBottomColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
+    - _DayTopColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+    - _HorizonColorDay: {r: 0.4339623, g: 0.4339623, b: 0.4339623, a: 1}
     - _HorizonColorNight: {r: 0.12758097, g: 0.18826702, b: 0.4433962, a: 1}
     - _MoonColor: {r: 1, g: 0.96150243, b: 0.7971698, a: 1}
     - _NightBottomColor: {r: 0.11992702, g: 0.11992702, b: 0.3301887, a: 1}
     - _NightTopColor: {r: 0.084905684, g: 0.005206483, b: 0.005206483, a: 1}
     - _SkyCosmosColor: {r: 0.022079106, g: 0.008410462, b: 0.1981132, a: 1}
     - _StarsSkyColor: {r: 0, g: 0.110566966, b: 0.23584908, a: 1}
-    - _SunColor: {r: 1, g: 0.8600918, b: 0.7783019, a: 1}
-    - _SunSet: {r: 1, g: 0.8, b: 1, a: 1}
+    - _SunColor: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 1}
+    - _SunSet: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
     - _TopColor: {r: 0, g: 0.54938966, b: 0.8490566, a: 1}
     - _TopColor2: {r: 0, g: 0, b: 0.1792453, a: 1}

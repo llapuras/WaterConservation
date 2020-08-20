@@ -19,8 +19,6 @@ public class NextLevelState : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(count);
-
         if (count != linesList.Length)
         {
             nextBtn.SetActive(false);

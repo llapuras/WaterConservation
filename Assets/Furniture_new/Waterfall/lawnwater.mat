@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: PolygonTown_01_A
-  m_Shader: {fileID: 4800000, guid: ff34b21bf5969564eacc0c367302abe2, type: 3}
-  m_ShaderKeywords: _DETAIL_MULX2 _METALLICGLOSSMAP _NORMALMAP
+  m_Name: lawnwater
+  m_Shader: {fileID: 4800000, guid: 25e78747a9756bc48a95047533081e0b, type: 3}
+  m_ShaderKeywords: RIM
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -32,19 +32,19 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailNormalMap:
-        m_Texture: {fileID: 2800000, guid: f19d91fb55c31f3489e749e808679b35, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
-        m_Texture: {fileID: 2800000, guid: efa34d710ef93124aa8baa1a8e6708d0, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 3ff3041d26e84b247b1a900206562e65, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 414d49db8a9dc1b4c884ddcd07bfa01f, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -55,28 +55,47 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _ToonShade:
-        m_Texture: {fileID: 0}
+    - _SideNoiseTex:
+        m_Texture: {fileID: 2800000, guid: 60a4c29250f37b7488b1cd1597ce151e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TopNoiseTex:
+        m_Texture: {fileID: 2800000, guid: 1f173896b25dc1c449b3cfec70f39d01, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Atten: 1
+    - _BrightNess: 0.79
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EdgeWidth: 0.4
+    - _Foam: 8.18
     - _GlossMapScale: 1
-    - _Glossiness: 0.2
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HorSpeed: -0.94
     - _Metallic: 0
     - _Mode: 0
+    - _NoiseScale: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _RIM: 1
+    - _RimPower: 1.4
     - _SmoothnessTextureChannel: 0
+    - _Softness: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
+    - _TopScale: 0
+    - _TopSpread: 0
     - _UVSec: 0
+    - _VERTEX: 0
+    - _VertSpeed: 2
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FoamColor: {r: 0.64275545, g: 0.8679245, b: 0.8614433, a: 1}
+    - _RimColor: {r: 0, g: 0.74793315, b: 1, a: 1}
+    - _TColor: {r: 0.493948, g: 0.83411855, b: 0.9433962, a: 0}
+    - _WaterColor: {r: 0.5896226, g: 0.88734734, b: 1, a: 0.050980393}

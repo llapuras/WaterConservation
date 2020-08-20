@@ -1019,7 +1019,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cook Meal
+  m_Text: Shower/Bath
 --- !u!222 &49315273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1984,7 +1984,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2193\u2193\u2193"
+  m_Text: "\u2193 \u2193 \u2193"
 --- !u!222 &151669616
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6657,7 +6657,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569982325}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 225.29}
+  m_LocalPosition: {x: 0, y: 0, z: 225.364}
   m_LocalScale: {x: 0.29999998, y: 0.29999998, z: 0.29999998}
   m_Children:
   - {fileID: 987681858}
@@ -8141,7 +8141,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 676337716}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de3e3cb4812e7384b8b96eca3211899a, type: 3}
   m_Name: 
@@ -10505,7 +10505,7 @@ PrefabInstance:
     - target: {fileID: 3939538302050767833, guid: 5bcdb2f89498fba4fbd08e2fc307d0b5,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 224.18126
+      value: 224.53
       objectReference: {fileID: 0}
     - target: {fileID: 3939538302050767833, guid: 5bcdb2f89498fba4fbd08e2fc307d0b5,
         type: 3}
@@ -10550,7 +10550,7 @@ PrefabInstance:
     - target: {fileID: 3939538302050767833, guid: 5bcdb2f89498fba4fbd08e2fc307d0b5,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -809.09015
+      value: -809.16
       objectReference: {fileID: 0}
     - target: {fileID: 3939538302050767833, guid: 5bcdb2f89498fba4fbd08e2fc307d0b5,
         type: 3}
@@ -10964,7 +10964,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 847584748}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de3e3cb4812e7384b8b96eca3211899a, type: 3}
   m_Name: 
@@ -13825,7 +13825,7 @@ PrefabInstance:
         type: 3}
       propertyPath: showupList.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1446456276}
     - target: {fileID: 8335688499477774850, guid: c75bfd94724778f4aa54af2ff6025f8e,
         type: 3}
       propertyPath: hideList.Array.size
@@ -14588,8 +14588,8 @@ MonoBehaviour:
   targetObject: {fileID: 1507131715}
   targetOffset: {x: 0, y: -2, z: 0}
   averageDistance: 6
-  maxDistance: 100
-  minDistance: 6
+  maxDistance: 6
+  minDistance: 3
   xSpeed: 100
   ySpeed: 100
   yMinLimit: -80
@@ -14899,8 +14899,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hideList:
   - {fileID: 1544851917}
+  - {fileID: 294906212}
   showupList:
-  - {fileID: 0}
+  - {fileID: 1754024007}
 --- !u!114 &1122814635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15036,7 +15037,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - "Maybe I should wash plates ... It smells weird in the house ( \xD7\u03C9\xD7
+    - "Maybe I should wash plates ... \n\nIt smells weird in the house ( \xD7\u03C9\xD7
       )"
 --- !u!114 &1126735702
 MonoBehaviour:
@@ -24214,7 +24215,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1817831610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de3e3cb4812e7384b8b96eca3211899a, type: 3}
   m_Name: 
@@ -25048,7 +25049,7 @@ MonoBehaviour:
   dialogue:
     name: 
     sentences:
-    - "Where are my plates ... \u03A3(\uFF9F\u0414\uFF9F\uFF1B\u2261\uFF1B\uFF9F\u0434\uFF9F)\n\nI
+    - "Wait ! Where are my plates \u03A3(\uFF9F\u0414\uFF9F\uFF1B\u2261\uFF1B\uFF9F\u0434\uFF9F)\n\nI
       know they must be at home, I gonna find  them all."
 --- !u!1 &1852822250
 GameObject:
@@ -25206,7 +25207,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1870088449}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de3e3cb4812e7384b8b96eca3211899a, type: 3}
   m_Name: 

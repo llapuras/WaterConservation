@@ -77,22 +77,26 @@ public class Clock : MonoBehaviour {
         {
 			pauseBtn.SetActive(true);
 			playBtn.SetActive(false);
-			UIMask.SetActive(false);
+			if(UIMask) UIMask.SetActive(false);
 		}
         else
         {
 			pauseBtn.SetActive(false);
 			playBtn.SetActive(true);
-			UIMask.SetActive(true);
+
+			if(UIMask) UIMask.SetActive(true);
 		}
     }
 
 
-    private void Start()
-    {
+	private void Start()
+	{
 		InitialDegrees();
 		InitialTime();
-		dateUI.text = "Day " + date;
+		if (dateUI)
+		{
+			dateUI.text = "Day " + date;
+		}
 	}
 
     void Update () {
@@ -114,7 +118,8 @@ public class Clock : MonoBehaviour {
 		}	
 	}
 
-	void UpdateContinuous() {
+	void UpdateContinuous()
+	{
 		TimeSpan time = DateTime.Now.TimeOfDay;
 		hoursTransform.localRotation =//弥补暂停多出来的时间差
 			Quaternion.Euler(0f, (float)(time.TotalHours - initialHour) * degreesPerHour, 0f);
@@ -128,7 +133,11 @@ public class Clock : MonoBehaviour {
 
 		//UI
 		date = (int)((time.TotalHours - initialHour) * degreesPerHour / 720) + 1;
-		dateUI.text = "Day " + date;
+
+		if (dateUI)
+		{
+			dateUI.text = "Day " + date;
+		}
 	}
 
 	public double ReturnDeltaTime()

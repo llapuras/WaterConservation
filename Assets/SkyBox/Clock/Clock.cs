@@ -17,6 +17,8 @@ public class Clock : MonoBehaviour {
 	public GameObject sky;
 	public Vector3 skydegree;
 
+	public GameObject timeoutPanel;
+
 	public bool isPause = false;
 
 	private float degreesPerHour, degreesPerMinute, degreesPerSecond;
@@ -115,6 +117,14 @@ public class Clock : MonoBehaviour {
 
 			UpdateContinuous();
 			sky.transform.rotation = Quaternion.Euler(skydegree);
+			//Debug.Log((float)((DateTime.Now.TimeOfDay.TotalHours - initialHour) * degreesPerHour) / 2 / 360);
+			//time out
+			if ((float)((DateTime.Now.TimeOfDay.TotalHours - initialHour) * degreesPerHour) / 2 / 360 > 1)
+			{
+				timeoutPanel.SetActive(true);
+				SetPause();
+
+			}
 		}	
 	}
 
@@ -139,6 +149,8 @@ public class Clock : MonoBehaviour {
 		//{
 		//	dateUI.text = "Day " + date;
 		//}
+
+		
 	}
 
 	public double ReturnDeltaTime()
